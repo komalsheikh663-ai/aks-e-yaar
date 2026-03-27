@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aks-e-Yaar - Urdu Novel</title>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-8741169014792010" crossorigin="anonymous"></script>
+    
+    <script>
+        // 2. App Open Ad Call: Page load hote hi active karne ke liye
+        window.onload = function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        };
+    </script>
     
     <style>
         :root { --main: #FFD700; --bg: #fffdf0; }
@@ -28,7 +36,6 @@
         }
         .app-sub { font-size: 13px; color: #444; font-style: italic; margin-top: -2px; }
 
-        /* Banner Ad Area */
         .ad-container { margin: 10px 0; min-height: 50px; }
 
         .info-card { 
@@ -51,12 +58,10 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* Native Ad Box between buttons */
-        .native-box { grid-column: span 2; margin: 10px 0; border: 1px dashed #ccc; border-radius: 8px; }
+        .native-box { grid-column: span 2; margin: 10px 0; border: 1px dashed #ccc; border-radius: 8px; min-height: 100px; }
 
         .novel-container { position: relative; width: 100%; height: 85vh; display: none; border-top: 2px solid var(--main); background: #f0f0f0; margin-top: 5px; }
         
-        /* Protection: Security Shield for Google Drive pop-out */
         .security-overlay { 
             position: absolute; top: 0; right: 0; 
             width: 70px; height: 60px; 
@@ -107,7 +112,14 @@
 
     <script>
         function openNovel(id) {
-            // Interstitial Ad Trigger placeholder (ca-app-pub-8741169014792010/7623624828)
+            // 4. Interstitial Trigger (Original ID: 7623624828)
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({
+                    google_ad_client: "ca-app-pub-8741169014792010",
+                    enable_page_level_ads: true
+                });
+            } catch (e) { console.log("Ad loading..."); }
+
             const area = document.getElementById('viewArea');
             const frame = document.getElementById('novelFrame');
             const loader = document.getElementById('loadingIcon');
@@ -121,7 +133,7 @@
         
         function stopLoad() { document.getElementById('loadingIcon').style.display = 'none'; }
         
-        // Protection: Block Keyboard Shortcuts
+        // Protection: Security Settings preserved
         document.addEventListener('keydown', e => { 
             if (e.ctrlKey && ['c','u','s','p'].includes(e.key)) e.preventDefault(); 
         });
